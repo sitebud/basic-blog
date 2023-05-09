@@ -1,0 +1,35 @@
+{
+  "defaultLocale": "en-US",
+  "root": {
+    "id": "site",
+    "type": "site",
+    "documentClass": "Site",
+    "contents": {
+      "en-US": {
+        "isCustomSlug": true,
+        "title": "Site",
+        "tags": {},
+        "slug": "@site"
+      }
+    },
+    "children": [
+      {
+        "id": "main_page",
+        "type": "main_page",
+        "documentClass": "MainPage",
+        "contents": {
+          "en-US": {
+            "isCustomSlug": true,
+            "title": "Home",
+            "tags": {},
+            "slug": "home",
+            "includeInSiteMap": true
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  "tagsLinks": {},
+  "authorsDocumentIds": {}
+}

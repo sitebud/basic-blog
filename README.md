@@ -1,2 +1,1 @@
-# basic-blog
-Basic Blog
+# Basic Blog

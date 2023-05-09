@@ -1,0 +1,36 @@
+{
+  "id": "site",
+  "type": "site",
+  "documentClass": "Site",
+  "contents": {
+    "en-US": {
+      "title": "Site",
+      "slug": "@site",
+      "statusMap": {},
+      "isCustomSlug": true,
+      "tags": {},
+      "dataFields": [
+        {
+          "name": "siteTitle",
+          "value": "Basic Blog",
+          "type": "string"
+        },
+        {
+          "name": "siteLogo",
+          "value": "/_assets/images/logo.png",
+          "type": "string"
+        }
+      ],
+      "documentAreas": [
+        {
+          "name": "mainMenu",
+          "blocks": []
+        },
+        {
+          "name": "footer",
+          "blocks": []
+        }
+      ]
+    }
+  }
+}

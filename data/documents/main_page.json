@@ -1,0 +1,38 @@
+{
+  "id": "main_page",
+  "type": "main_page",
+  "documentClass": "MainPage",
+  "contents": {
+    "en-US": {
+      "title": "Home",
+      "slug": "home",
+      "statusMap": {},
+      "isCustomSlug": true,
+      "tags": {},
+      "dataFields": [
+        {
+          "name": "metaDescription",
+          "value": "The main page description",
+          "type": "string"
+        },
+        {
+          "name": "metaRobots",
+          "value": "index,follow",
+          "type": "string"
+        },
+        {
+          "name": "twitterCardImage",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "documentAreas": [
+        {
+          "name": "pageBody",
+          "blocks": []
+        }
+      ],
+      "includeInSiteMap": true
+    }
+  }
+}
