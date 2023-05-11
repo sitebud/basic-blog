@@ -10,7 +10,7 @@ const AdminPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ow
     useEffect(() => {
         if (owner && repo) {
             const rootUrl = `${window.location.protocol}//${window.location.host}`;
-            const targetUrl = `https://sitebud-cms.web.app/?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}&referrer=${encodeURIComponent(rootUrl)}`;
+            const targetUrl = `https://app.sitebudcms.com/?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}&referrer=${encodeURIComponent(rootUrl)}`;
             router.replace(targetUrl);
         } else {
             setError(true);
