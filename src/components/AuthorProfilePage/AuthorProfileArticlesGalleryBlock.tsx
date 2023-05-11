@@ -23,7 +23,7 @@ export function AuthorProfileArticlesGalleryBlock(props: AuthorProfileArticlesGa
         <section className="w-full">
             <div className="container flex flex-col justify-start">
                 <div className="custom-prose my-8 flex items-center justify-between text-gray-800">
-                    <div dangerouslySetInnerHTML={{__html: galleryTitle}} />
+                    <div className="w-full" dangerouslySetInnerHTML={{__html: galleryTitle}} />
                 </div>
                 <div className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
                     {joinedList.map((documentContentItem, idx) => {
