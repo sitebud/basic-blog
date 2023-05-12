@@ -27,8 +27,8 @@ const AdminPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ow
 };
 
 export async function getStaticProps() {
-    const owner = process.env.OWNER || null;
-    const repo = process.env.REPO || null;
+    const owner = process.env.OWNER || process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER || null;
+    const repo = process.env.REPO || process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG || null;
 
     return {
         props: {
