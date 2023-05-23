@@ -1,8 +1,7 @@
 import path from 'path';
 import fs from 'fs-extra';
 import React from 'react';
-import type {GetStaticPaths, NextPage} from 'next';
-import {GetStaticPropsContext, InferGetStaticPropsType} from 'next';
+import type {NextPage, InferGetServerSidePropsType, GetServerSidePropsContext} from 'next';
 import {useRouter} from 'next/router';
 import Script from 'next/script';
 import {
@@ -11,44 +10,21 @@ import {
     RawDataProvider,
     fetchRawData,
     initExternalModules,
-    createPaths, RequestOptions
+    RequestOptions
 } from '@sitebud/bridge-lib';
 import {PageFacade} from '@/PageFacade';
-import NotFound from './404';
+import NotFound from '../404';
 
-export type PagePathParams = {
-    route_path: Array<string>;
-};
-
-export type PagePathData = {
-    params: PagePathParams;
-    locale?: string;
-};
-
-const requestOptions: RequestOptions = {
-    accessLevel: 0
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    initExternalModules({fsExtra: fs, path});
-    let paths: Array<PagePathData> = await createPaths();
-    return {
-        // We'll pre-render only these paths at build time.
-        paths,
-        // { fallback: blocking } will server-render pages
-        // { fallback: false } means other routes should 404.
-        // on-demand if the path doesn't exist.
-        fallback: 'blocking'
-    }
-}
-
-export async function getStaticProps({locale, params, preview}: GetStaticPropsContext) {
-    const route_path = (params?.route_path as string[]) || [];
+export async function getServerSideProps({locale, params, preview}: GetServerSidePropsContext) {
+    const route_path = (params?.paywall_route_path as string[]) || [];
     if (route_path.length > 0) {
         let slug: string = route_path[route_path.length - 1];
         try {
+            const requestOptions: RequestOptions = {
+                accessLevel: 1
+            };
+            initExternalModules({fsExtra: fs, path});
             if (!preview) {
-                initExternalModules({fsExtra: fs, path});
                 const {pageData, siteData} = await fetchRawData(requestOptions, locale, slug);
                 return {
                     props: {
@@ -68,7 +44,8 @@ export async function getStaticProps({locale, params, preview}: GetStaticPropsCo
                     pageData: {} as DocumentData,
                     siteData: {} as DocumentData,
                     slug,
-                    isPreview: true
+                    isPreview: true,
+                    accessLevel: requestOptions.accessLevel,
                 }
             }
         } catch (e: unknown) {
@@ -85,8 +62,8 @@ export async function getStaticProps({locale, params, preview}: GetStaticPropsCo
     }
 }
 
-const RoutePage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps> & { children?: React.ReactNode }) => {
-    const {pageData, siteData, slug, isPreview} = props;
+const PaywallRoutePage: NextPage = (props: InferGetServerSidePropsType<typeof getServerSideProps> & { children?: React.ReactNode }) => {
+    const {pageData, siteData, slug, isPreview, accessLevel} = props;
     const {locale, defaultLocale} = useRouter();
     if (isPreview) {
         return (
@@ -94,8 +71,8 @@ const RoutePage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProp
                 Script={Script}
                 custom404={<NotFound/>}
                 slug={slug}
+                requestOptions={{accessLevel: accessLevel || 1}}
                 locale={locale || defaultLocale || ''}
-                requestOptions={requestOptions}
             >
                 <PageFacade />
             </PreviewDataProvider>
@@ -112,4 +89,4 @@ const RoutePage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProp
     );
 }
 
-export default RoutePage;
+export default PaywallRoutePage;

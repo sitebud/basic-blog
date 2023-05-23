@@ -15,8 +15,8 @@ export const categoriesGalleryBlock: BlockConfig = {
                     indexNumber: 1,
                     type: 'DocumentsList',
                     label: '',
+                    isRequired: true,
                     fieldContent: {
-                        isRequired: false,
                         selectionMode: 'selectDocuments',
                         allowedDocumentClasses: ['CategoryPage'],
                         selectDocumentAreas: ['card'],
@@ -34,13 +34,6 @@ export const categoriesGalleryBlock: BlockConfig = {
                             label: 'Select By Parent Documents',
                             fieldContent: {
                                 selectionMode: 'selectChildrenDocuments',
-                                selectDocumentAreas: ['card'],
-                            }
-                        },
-                        {
-                            label: 'Select By Tags',
-                            fieldContent: {
-                                selectionMode: 'selectTags',
                                 selectDocumentAreas: ['card'],
                             }
                         }

@@ -3,14 +3,16 @@ import {NextPage, InferGetStaticPropsType} from 'next';
 import {useRouter} from 'next/router';
 import {AdminRedirectError} from '@sitebud/bridge-lib';
 
-const AdminPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({owner, repo}) => {
+let siteBudCMSBaseURL: string = 'https://app.sitebudcms.com';
+
+const AdminPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({owner, repo, sbSecret}) => {
     const router = useRouter();
     const [isError, setError] = useState<boolean>(false);
 
     useEffect(() => {
-        if (owner && repo) {
+        if (owner && repo && sbSecret) {
             const rootUrl = `${window.location.protocol}//${window.location.host}`;
-            const targetUrl = `https://app.sitebudcms.com/?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}&referrer=${encodeURIComponent(rootUrl)}`;
+            const targetUrl = `${siteBudCMSBaseURL}/?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}&referrer=${encodeURIComponent(rootUrl)}`;
             router.replace(targetUrl);
         } else {
             setError(true);
@@ -27,13 +29,15 @@ const AdminPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ow
 };
 
 export async function getStaticProps() {
-    const owner = process.env.OWNER || process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER || null;
-    const repo = process.env.REPO || process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG || null;
+    const owner = process.env.OWNER || process.env.VERCEL_GIT_REPO_OWNER || null;
+    const repo = process.env.REPO || process.env.VERCEL_GIT_REPO_SLUG || null;
+    const sbSecret = process.env.SB_SECRET || null;
 
     return {
         props: {
             owner,
             repo,
+            sbSecret
         },
     };
 }

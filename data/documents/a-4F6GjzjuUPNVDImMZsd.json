@@ -1,1 +1,136 @@
-{"id":"a-4F6GjzjuUPNVDImMZsd","type":"page","documentClass":"TagPage","contents":{"en-US":{"title":"Samples Tag","slug":"samples-tag","includeInSiteMap":true,"statusMap":{},"isCustomSlug":false,"tags":{},"dataFields":[{"name":"metaDescription","value":"This is Samples tag page","type":"string"},{"name":"metaRobots","value":"index,follow","type":"string"}],"documentAreas":[{"name":"pageBody","blocks":[{"id":"X3JiBPE2yrM-Jzj403RzP","name":"defaultHeadingBlock","components":[{"name":"defaultHeading","instances":[{"id":"D0Y5P-U0bZCx45xFwikwK","props":[{"name":"text","type":"HeaderText","fieldContent":{"htmlText":"<h1>All samples</h1>"}}]}]}]},{"id":"2nfQ8l6MA9g5C8rfSy-iY","name":"tagArticlesGalleryBlock","components":[{"name":"galleryListing","instances":[{"id":"EOe0yJtU5m0M3FQxyaKrt","props":[{"name":"documentList","type":"DocumentsList","fieldContent":{"isRequired":true,"selectionMode":"selectTags","selectDocumentAreas":["card"],"tags":["Samples"]}}]}]}]}]},{"name":"card","blocks":[{"id":"3oEOeeuA5vpuYxGvtO1s2","name":"cardImageBlock","components":[{"name":"cardViewImage","instances":[{"id":"XZZyZVbTb_ccM6FSf_OIf","props":[{"name":"image","type":"Image","fieldContent":{"src":"/_assets/images/sample-tag-2.svg","alt":"Sample Tag Card","focusX":95.42,"focusY":13.24}}]}]}]},{"id":"E-59UpUUuh6op55oTEydE","name":"cardTitleBlock","components":[{"name":"cardTitle","instances":[{"id":"ZLe0KyAj74YcNdorKPLRg","props":[{"name":"text","type":"ParagraphText","fieldContent":{"htmlText":"<h5>Samples</h5>"}}]}]}]}]}],"dateUpdated":1683811261267,"authors":{"apustovalov@gmail.com":1683811261267}}}}
+{
+  "id": "a-4F6GjzjuUPNVDImMZsd",
+  "type": "page",
+  "documentClass": "TagPage",
+  "contents": {
+    "en-US": {
+      "title": "Samples Tag",
+      "slug": "samples-tag",
+      "includeInSiteMap": true,
+      "statusMap": {},
+      "isCustomSlug": false,
+      "documentAreas": [
+        {
+          "name": "metaData",
+          "blocks": []
+        },
+        {
+          "name": "pageBody",
+          "blocks": [
+            {
+              "id": "X3JiBPE2yrM-Jzj403RzP",
+              "name": "defaultHeadingBlock",
+              "components": [
+                {
+                  "name": "defaultHeading",
+                  "instances": [
+                    {
+                      "id": "D0Y5P-U0bZCx45xFwikwK",
+                      "props": [
+                        {
+                          "name": "text",
+                          "type": "HeaderText",
+                          "fieldContent": {
+                            "htmlText": "<h1>All samples</h1>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2nfQ8l6MA9g5C8rfSy-iY",
+              "name": "tagArticlesGalleryBlock",
+              "components": [
+                {
+                  "name": "galleryListing",
+                  "instances": [
+                    {
+                      "id": "EOe0yJtU5m0M3FQxyaKrt",
+                      "props": [
+                        {
+                          "name": "documentList",
+                          "type": "DocumentsList",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "selectionMode": "selectTags",
+                            "selectDocumentAreas": [
+                              "card"
+                            ],
+                            "tags": [
+                              "Samples"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "card",
+          "blocks": [
+            {
+              "id": "3oEOeeuA5vpuYxGvtO1s2",
+              "name": "cardImageBlock",
+              "components": [
+                {
+                  "name": "cardViewImage",
+                  "instances": [
+                    {
+                      "id": "XZZyZVbTb_ccM6FSf_OIf",
+                      "props": [
+                        {
+                          "name": "image",
+                          "type": "Image",
+                          "fieldContent": {
+                            "src": "/_assets/images/sample-tag-2.svg",
+                            "alt": "Sample Tag Card",
+                            "focusX": 95.42,
+                            "focusY": 13.24
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "E-59UpUUuh6op55oTEydE",
+              "name": "cardTitleBlock",
+              "components": [
+                {
+                  "name": "cardTitle",
+                  "instances": [
+                    {
+                      "id": "ZLe0KyAj74YcNdorKPLRg",
+                      "props": [
+                        {
+                          "name": "text",
+                          "type": "ParagraphText",
+                          "fieldContent": {
+                            "htmlText": "<h5>Samples</h5>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dateUpdated": 1683811261267,
+      "authors": {
+        "apustovalov@gmail.com": 1683811261267
+      }
+    }
+  }
+}

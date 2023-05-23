@@ -62,13 +62,22 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps> & { children
     const {locale, defaultLocale} = useRouter();
     if (isPreview) {
         return (
-            <PreviewDataProvider Script={Script} custom404={<NotFound/>} requestOptions={requestOptions} locale={locale || defaultLocale || ''}>
+            <PreviewDataProvider
+                Script={Script}
+                custom404={<NotFound/>}
+                requestOptions={requestOptions}
+                locale={locale || defaultLocale || ''}
+            >
                 <PageFacade />
             </PreviewDataProvider>
         );
     }
     return (
-        <RawDataProvider siteData={siteData} pageData={pageData} custom404={<NotFound/>}>
+        <RawDataProvider
+            siteData={siteData}
+            pageData={pageData}
+            custom404={<NotFound/>}
+        >
             <PageFacade />
         </RawDataProvider>
     );

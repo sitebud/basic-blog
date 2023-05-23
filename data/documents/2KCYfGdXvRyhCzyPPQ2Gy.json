@@ -1,1 +1,277 @@
-{"id":"2KCYfGdXvRyhCzyPPQ2Gy","type":"page","documentClass":"AuthorProfilePage","contents":{"en-US":{"title":"Author Page","slug":"author-page","includeInSiteMap":true,"statusMap":{},"isCustomSlug":false,"tags":{},"dataFields":[{"name":"metaDescription","value":"This is an author's page","type":"string"},{"name":"metaRobots","value":"index,follow","type":"string"}],"documentAreas":[{"name":"pageBody","blocks":[{"id":"yXz7Y24DH6IVdi1bOKYN6","name":"authorProfileHeroBlock","components":[{"name":"authorName","instances":[{"id":"ODzo1Eje314fGXaqG-RSN","props":[{"name":"text","type":"HeaderText","fieldContent":{"htmlText":"<h1>Author</h1>"}}]}]},{"name":"description","instances":[{"id":"zt_kgvihvbKeM3ho1wy5D","props":[{"name":"text","type":"ParagraphText","fieldContent":{"htmlText":"<p>Brief info about author</p>"}}]}]},{"name":"authorPicture","instances":[{"id":"I7Wrb61Lift0VubWHG99g","props":[{"name":"image","type":"Image","fieldContent":{"src":"/_assets/images/author-1.svg","focusX":71.58,"focusY":24.57,"alt":"Author Image"}}]}]}]},{"id":"GBYAxIa_sbnHwItL95yRq","name":"authorProfileSocialLinksBlock","components":[{"name":"socialLinks","isArray":true,"instances":[{"id":"f8TYdVSh8j7_x_IWFFyNt","props":[{"name":"network","type":"StringValue","fieldContent":{"value":"twitter","isRequired":true}},{"name":"link","type":"StringValue","fieldContent":{"isRequired":true,"value":"https://twitter.com/sitebud"}}]},{"id":"uCaOt7Z_h7NbiZvZWbGct","props":[{"name":"network","type":"StringValue","fieldContent":{"value":"facebook","isRequired":true}},{"name":"link","type":"StringValue","fieldContent":{"isRequired":true,"value":"https://twitter.com/sitebud"}}]},{"id":"cC44t72-Whn4sphqAKzUb","props":[{"name":"network","type":"StringValue","fieldContent":{"value":"instagram","isRequired":true}},{"name":"link","type":"StringValue","fieldContent":{"isRequired":true,"value":"https://twitter.com/sitebud"}}]}]}]},{"id":"otATw8Gxu_LlLHKWybHId","name":"articlesGalleryBlock","components":[{"name":"galleryHeading","instances":[{"id":"3wAjVhJjgatd66dMsx74h","props":[{"name":"text","type":"HeaderText","fieldContent":{"htmlText":"<h2 style=\"text-align: center\">Author's articles</h2>"}}]}]},{"name":"galleryListing","instances":[{"id":"OLSnR6gaNGEap-bysxpiE","props":[{"name":"documentsList","type":"DocumentsList","fieldContent":{"isRequired":false,"selectionMode":"selectDocuments","allowedDocumentClasses":["ArticlePage"],"selectDocumentAreas":["card"],"documentsIds":["UVB25FSXrZpMEiB5ef7B9"]}}]}]}]}]},{"name":"authorByline","blocks":[{"id":"tltwVq5yG6OUejeA6tE8L","name":"authorProfileAvatarBlock","components":[{"name":"avatar","instances":[{"id":"YTtfSmomx9UboI1ccoixU","props":[{"name":"image","type":"Image","fieldContent":{"src":"/_assets/images/author-avatar-1.svg","alt":"Avatar","focusX":53.33,"focusY":35.91}}]}]}]},{"id":"WyZZ-ehv4_i7CUe459vQ0","name":"authorProfileInfoBlock","components":[{"name":"info","instances":[{"id":"z8dojUWkW3L64rHuDxhqc","props":[{"name":"fullName","type":"StringValue","fieldContent":{"isRequired":true,"value":"Author"}},{"name":"email","type":"StringValue","fieldContent":{"isRequired":true,"value":"some@gmail.com"}}]}]}]}]}],"dateUpdated":1683811567539,"authors":{"apustovalov@gmail.com":1683811567539}}}}
+{
+  "id": "2KCYfGdXvRyhCzyPPQ2Gy",
+  "type": "page",
+  "documentClass": "AuthorProfilePage",
+  "contents": {
+    "en-US": {
+      "title": "Author Page",
+      "slug": "author-page",
+      "includeInSiteMap": true,
+      "statusMap": {},
+      "isCustomSlug": false,
+      "documentAreas": [
+        {
+          "name": "metaData",
+          "blocks": []
+        },
+        {
+          "name": "pageBody",
+          "blocks": [
+            {
+              "id": "yXz7Y24DH6IVdi1bOKYN6",
+              "name": "authorProfileHeroBlock",
+              "components": [
+                {
+                  "name": "authorName",
+                  "instances": [
+                    {
+                      "id": "ODzo1Eje314fGXaqG-RSN",
+                      "props": [
+                        {
+                          "name": "text",
+                          "type": "HeaderText",
+                          "fieldContent": {
+                            "htmlText": "<h1>Author</h1>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "description",
+                  "instances": [
+                    {
+                      "id": "zt_kgvihvbKeM3ho1wy5D",
+                      "props": [
+                        {
+                          "name": "text",
+                          "type": "ParagraphText",
+                          "fieldContent": {
+                            "htmlText": "<p>Brief info about author</p>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "authorPicture",
+                  "instances": [
+                    {
+                      "id": "I7Wrb61Lift0VubWHG99g",
+                      "props": [
+                        {
+                          "name": "image",
+                          "type": "Image",
+                          "fieldContent": {
+                            "src": "/_assets/images/author-1.svg",
+                            "focusX": 71.58,
+                            "focusY": 24.57,
+                            "alt": "Author Image"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "GBYAxIa_sbnHwItL95yRq",
+              "name": "authorProfileSocialLinksBlock",
+              "components": [
+                {
+                  "name": "socialLinks",
+                  "isArray": true,
+                  "instances": [
+                    {
+                      "id": "f8TYdVSh8j7_x_IWFFyNt",
+                      "props": [
+                        {
+                          "name": "network",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "value": "twitter",
+                            "isRequired": true
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "value": "https://twitter.com/sitebud"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "uCaOt7Z_h7NbiZvZWbGct",
+                      "props": [
+                        {
+                          "name": "network",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "value": "facebook",
+                            "isRequired": true
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "value": "https://twitter.com/sitebud"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "cC44t72-Whn4sphqAKzUb",
+                      "props": [
+                        {
+                          "name": "network",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "value": "instagram",
+                            "isRequired": true
+                          }
+                        },
+                        {
+                          "name": "link",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "value": "https://twitter.com/sitebud"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "otATw8Gxu_LlLHKWybHId",
+              "name": "articlesGalleryBlock",
+              "components": [
+                {
+                  "name": "galleryHeading",
+                  "instances": [
+                    {
+                      "id": "3wAjVhJjgatd66dMsx74h",
+                      "props": [
+                        {
+                          "name": "text",
+                          "type": "HeaderText",
+                          "fieldContent": {
+                            "htmlText": "<h2 style=\"text-align: center\">Author's articles</h2>"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "galleryListing",
+                  "instances": [
+                    {
+                      "id": "OLSnR6gaNGEap-bysxpiE",
+                      "props": [
+                        {
+                          "name": "documentsList",
+                          "type": "DocumentsList",
+                          "fieldContent": {
+                            "isRequired": false,
+                            "selectionMode": "selectDocuments",
+                            "allowedDocumentClasses": [
+                              "ArticlePage"
+                            ],
+                            "selectDocumentAreas": [
+                              "card"
+                            ],
+                            "documentsIds": [
+                              "UVB25FSXrZpMEiB5ef7B9"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "authorByline",
+          "blocks": [
+            {
+              "id": "tltwVq5yG6OUejeA6tE8L",
+              "name": "authorProfileAvatarBlock",
+              "components": [
+                {
+                  "name": "avatar",
+                  "instances": [
+                    {
+                      "id": "YTtfSmomx9UboI1ccoixU",
+                      "props": [
+                        {
+                          "name": "image",
+                          "type": "Image",
+                          "fieldContent": {
+                            "src": "/_assets/images/author-avatar-1.svg",
+                            "alt": "Avatar",
+                            "focusX": 53.33,
+                            "focusY": 35.91
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "WyZZ-ehv4_i7CUe459vQ0",
+              "name": "authorProfileInfoBlock",
+              "components": [
+                {
+                  "name": "info",
+                  "instances": [
+                    {
+                      "id": "z8dojUWkW3L64rHuDxhqc",
+                      "props": [
+                        {
+                          "name": "fullName",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "value": "Author"
+                          }
+                        },
+                        {
+                          "name": "email",
+                          "type": "StringValue",
+                          "fieldContent": {
+                            "isRequired": true,
+                            "value": "some@gmail.com"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dateUpdated": 1683811567539,
+      "authors": {
+        "apustovalov@gmail.com": 1683811567539
+      }
+    }
+  }
+}
