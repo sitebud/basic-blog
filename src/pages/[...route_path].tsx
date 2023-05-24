@@ -90,13 +90,23 @@ const RoutePage: NextPage = (props: InferGetStaticPropsType<typeof getStaticProp
     const {locale, defaultLocale} = useRouter();
     if (isPreview) {
         return (
-            <PreviewDataProvider Script={Script} custom404={<NotFound/>} slug={slug} locale={locale || defaultLocale || ''} requestOptions={requestOptions}>
+            <PreviewDataProvider
+                Script={Script}
+                custom404={<NotFound/>}
+                slug={slug}
+                locale={locale || defaultLocale || ''}
+                requestOptions={requestOptions}
+            >
                 <PageFacade />
             </PreviewDataProvider>
         );
     }
     return (
-        <RawDataProvider siteData={siteData} pageData={pageData} custom404={<NotFound/>}>
+        <RawDataProvider
+            siteData={siteData}
+            pageData={pageData}
+            custom404={<NotFound/>}
+        >
             <PageFacade />
         </RawDataProvider>
     );

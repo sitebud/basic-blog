@@ -3,7 +3,7 @@ import {BlockConfig} from '@sitebud/sdk-lib';
 export const authorProfileInfoBlock: BlockConfig = {
     label: 'Author Info',
     description: 'The author name and email',
-    imageName: 'author-profile-info-block.webp',
+    imageName: 'author_profile_info_block.png',
     components: {
         info: {
             indexNumber: 0,
@@ -13,17 +13,15 @@ export const authorProfileInfoBlock: BlockConfig = {
                     indexNumber: 0,
                     label: 'Full Name',
                     type: 'StringValue',
-                    fieldContent: {
-                        isRequired: true
-                    }
+                    isRequired: true,
+                    fieldContent: {}
                 },
                 email: {
                     indexNumber: 0,
                     label: 'Email',
                     type: 'StringValue',
-                    fieldContent: {
-                        isRequired: true
-                    }
+                    isRequired: true,
+                    fieldContent: {}
                 }
             }
         }

@@ -3,7 +3,7 @@ import {BlockConfig} from '@sitebud/sdk-lib';
 export const articlesGalleryBlock: BlockConfig = {
     label: 'Gallery of Articles Block',
     description: 'A display of article thumbnails creates a visually organized collection of compact previews.',
-    imageName: 'articles-gallery-block.webp',
+    imageName: 'articles_gallery_block.png',
     components: {
         galleryHeading: {
             indexNumber: 0,
@@ -31,33 +31,27 @@ export const articlesGalleryBlock: BlockConfig = {
                     type: 'DocumentsList',
                     label: '',
                     fieldContent: {
-                        isRequired: false,
                         selectionMode: 'selectDocuments',
                         allowedDocumentClasses: ['ArticlePage'],
-                        selectDocumentAreas: ['card'],
+                        selectDocumentAreas: ['card', 'metaData'],
                     },
                     fieldContentVariants: [
                         {
                             label: 'Select Documents',
                             fieldContent: {
                                 selectionMode: 'selectDocuments',
+                                selectDocumentClasses: ['ArticlePage'],
                                 allowedDocumentClasses: ['ArticlePage'],
-                                selectDocumentAreas: ['card'],
+                                selectDocumentAreas: ['card', 'metaData'],
                             }
                         },
                         {
                             label: 'Select By Parent Documents',
                             fieldContent: {
                                 selectionMode: 'selectChildrenDocuments',
-                                selectDocumentAreas: ['card'],
+                                selectDocumentAreas: ['card', 'metaData'],
+                                selectDocumentClasses: ['ArticlePage'],
                                 allowedDocumentClasses: ['CategoryPage']
-                            }
-                        },
-                        {
-                            label: 'Select By Tags',
-                            fieldContent: {
-                                selectionMode: 'selectTags',
-                                selectDocumentAreas: ['card'],
                             }
                         }
                     ]

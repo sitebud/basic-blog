@@ -3,7 +3,7 @@ import {BlockConfig} from '@sitebud/sdk-lib';
 export const authorProfileSocialLinksBlock: BlockConfig = {
     label: 'Social Links',
     description: 'The social links block is a designated area that contains clickable icons or links directing users to the website\'s or authors\'s social media profiles.',
-    imageName: 'author-profile-social-links-block.webp',
+    imageName: 'author_profile_social_links_block.png',
     components: {
         socialLinks: {
             isArray: true,
@@ -15,9 +15,9 @@ export const authorProfileSocialLinksBlock: BlockConfig = {
                     indexNumber: 0,
                     label: 'Social Network',
                     type: 'StringValue',
+                    isRequired: true,
                     fieldContent: {
                         value: 'twitter',
-                        isRequired: true,
                     },
                     fieldContentVariants: [
                         {
@@ -44,9 +44,8 @@ export const authorProfileSocialLinksBlock: BlockConfig = {
                     indexNumber: 1,
                     label: 'Network Profile URL',
                     type: 'StringValue',
-                    fieldContent: {
-                        isRequired: true
-                    }
+                    isRequired: true,
+                    fieldContent: {}
                 }
             }
         }
