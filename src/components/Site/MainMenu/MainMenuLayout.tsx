@@ -13,17 +13,17 @@ import {MainMenuLocaleSwitcher} from '@/components/Site/MainMenu/MainMenuLocaleS
 import {useRouter} from 'next/router';
 
 export function MainMenuLayout() {
-    const {siteContent} = useAdaptedContent();
+    const contentContext = useAdaptedContent();
     const {locale} = useRouter();
 
-    if (!siteContent) {
+    if (!contentContext?.siteContent) {
         return null;
     }
 
     let siteLogoImage: ImageField | undefined = undefined;
     let siteTitle: string | undefined = undefined;
-    if (siteContent.documentAreas.metaData) {
-        for(const metaDataItem of siteContent.documentAreas.metaData) {
+    if (contentContext.siteContent.documentAreas.metaData) {
+        for(const metaDataItem of contentContext.siteContent.documentAreas.metaData) {
             const {menuLogoBlock} = metaDataItem;
             siteLogoImage = menuLogoBlock?.logoImage.image;
             siteTitle = menuLogoBlock?.logoTitle.text;
@@ -33,7 +33,7 @@ export function MainMenuLayout() {
     let menuDocumentsBlock: Site_Footer_MenuDocumentsBlock | undefined = undefined;
     let menuLinksBlock: Site_MainMenu_MenuLinksBlock | undefined = undefined;
 
-    for (const contentItem of siteContent.documentAreas.mainMenu) {
+    for (const contentItem of contentContext.siteContent.documentAreas.mainMenu) {
         if (contentItem.menuDocumentsBlock) {
             menuDocumentsBlock = contentItem.menuDocumentsBlock;
         }
@@ -50,7 +50,7 @@ export function MainMenuLayout() {
                         <div className="flex items-center">
                             <Link href="/" className="mx-auto" locale={locale} prefetch={false}>
                                 <img
-                                    className="w-auto h-6 sm:h-7 rounded-full"
+                                    className="w-auto h-6 sm:h-7"
                                     src={siteLogoImage?.src}
                                     alt={siteTitle}
                                 />
