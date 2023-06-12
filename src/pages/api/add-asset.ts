@@ -24,6 +24,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     try {
         const decoded: any = jwt.verify(req.query.secret as string, SB_SECRET);
+        if (decoded.userEmail === 'demo@demo.com') {
+            res.status(401).send('The demo account lacks the necessary permissions to add images.');
+            return;
+        }
         if (decoded.userEmail === 'undefined') {
             res.status(401).send('The undefined account lacks the necessary permissions to add images.');
             return;

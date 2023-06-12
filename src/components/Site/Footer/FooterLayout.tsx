@@ -6,30 +6,30 @@ import {FooterMenuLinksBlock} from './FooterMenuLinksBlock';
 import {FooterMenuDocumentsBlock} from './FooterMenuDocumentsBlock';
 
 export function FooterLayout() {
-    const {siteContent} = useAdaptedContent();
+    const contentContext = useAdaptedContent();
     const {locale} = useRouter();
 
-    if (!siteContent) {
+    if (!contentContext?.siteContent) {
         return null;
     }
     let siteLogoImage: ImageField | undefined = undefined;
     let siteTitle: string | undefined = undefined;
-    if (siteContent.documentAreas.metaData) {
-        for(const metaDataItem of siteContent.documentAreas.metaData) {
+    if (contentContext.siteContent.documentAreas.metaData) {
+        for(const metaDataItem of contentContext.siteContent.documentAreas.metaData) {
             const {menuLogoBlock} = metaDataItem;
             siteLogoImage = menuLogoBlock?.logoImage.image;
             siteTitle = menuLogoBlock?.logoTitle.text;
         }
     }
 
-    const {documentAreas} = siteContent;
+    const {documentAreas} = contentContext.siteContent;
 
     return (
         <section className="w-full mt-28 mb-12">
             <div className="container">
                 <div className="flex flex-col items-center">
                     <Link href="/" locale={locale}>
-                        <img className="w-auto h-10 rounded-full" src={siteLogoImage?.src} alt={siteTitle} />
+                        <img className="w-auto h-10" src={siteLogoImage?.src} alt={siteTitle} />
                     </Link>
                     <div className="custom-prose mt-3 flex flex-col justify-start">
                         {documentAreas.footer.map((footerContentItem, idx) => {
